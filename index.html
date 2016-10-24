@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="src/css/index.min.css">
+	<link rel="stylesheet" type="text/css" href="src/css/jquery.Jcrop.min.css">
+	<script type="text/javascript" src='src/min_js/jquery.min.js'></script>
+	<script type="text/javascript" src='src/min_js/jquery.Jcrop.min.js'></script>
+	<script type="text/javascript" src='src/min_js/index.min.js'></script>
+</head>
+<body>
+<div class="container">
+	<div class="content">
+		<div class="infor-box">
+			<div class="file-box">
+				+
+				<input type="file" id="file">
+			</div>
+			<div class="img-before">
+				<img src="" id="imgBefore">
+			</div>
+		</div>
+		<div class="infor-box" id="infor">
+			<div>
+				<div class="input-box">
+					<div class="input-what">姓名:</div>
+					<input type="text" name="name">
+				</div>
+				<div class="input-box">
+					<div class="input-what">性别:</div>
+					<select name="gender" id="">
+						<option value="0">先生</option>
+						<option value="1">女士</option>
+					</select>
+				</div>
+				<div class="input-box">
+					<div class="input-what">班级:</div>
+					<input type="text" name="classGrade" placeholder='如 计科1101'>
+				</div>
+				<div class="input-box">
+					<div class="input-what">小组:</div>
+					<select name="group" id="">
+						<option value="Windows">Windows</option>
+						<option value="Android">Android</option>
+						<option value="iOS">iOS</option>
+						<option value="Web">Web</option>
+					</select>
+				</div>
+				<div class="input-box">
+					<div class="input-what">电话:</div>
+					<input type="text" name="tel">
+				</div>
+				<div class="input-box">
+					<div class="input-what">公司:</div>
+					<input type="text" name="company">
+				</div>
+				<div class="input-box">
+					<div class="input-what">年级:</div>
+					<select name="year" id="">
+						<option value="2008">2008</option>
+						<option value="2009">2009</option>
+						<option value="2010">2010</option>
+						<option value="2011">2011</option>
+						<option value="2012">2012</option>
+						<option value="2013">2013</option>
+					</select>
+					<!-- <input type="text" name="year"> -->
+				</div>				
+			</div>
+		</div>
+		<div class="infor-box">
+			<div class="textarea-box">
+				<div class="textarea-title">毕业学长/学姐寄语</div>
+				<textarea id="say-area"></textarea>
+			</div>
+			<div id="submit-button">提交</div>
+		</div>
+	</div>
+</div>
+<div class="shadow">
+	<div class="shadow-beforeBox">
+		<img src="" id="shadow-before">
+	</div>
+	<div id="preview_box">
+		<img src="" id="previewImg">
+	</div>
+	<div id="cutOK">确认头像</div>
+</div>
+</body>
+</html>
