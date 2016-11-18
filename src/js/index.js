@@ -101,6 +101,9 @@ var handle = {
 		}).bind(this));
 	},
 	ajaxUplod : function(inforJson){
+		// if (!fileJson['x']){
+		// 	console.log('no Jcrop');
+		// }
 		$.ajax({
 			url : 'http://member.xiyoumobile.com/api/member/submit',
 			data : inforJson,
@@ -115,12 +118,13 @@ var handle = {
 				fileJson.username = data.data;
 
 				var formData = new FormData();
-				if (!fileJson['x']) {
-					fileJson['x'] = 0;
-					fileJson['y'] = 0;
-					fileJson['width'] = $(window).width() * 0.4;
-					fileJson['height'] = $(window).width() * 0.4;
-				}
+				// if (!fileJson['x']) {
+				// 	// console.log()
+				// 	fileJson['x'] = 0;
+				// 	fileJson['y'] = 0;
+				// 	fileJson['width'] = $(window).width() * 0.4;
+				// 	fileJson['height'] = $(window).width() * 0.4;
+				// }
 				for(var name in fileJson){
 					formData.append(name, fileJson[name]);
 				}
@@ -164,11 +168,11 @@ var handle = {
 		_userImg.onload = function(){
 			var maxWH = ($(window).width() * 0.4) / $(window).height();
 			var nowWH = _userImg.width / _userImg.height;
-			if (nowWH <= maxWH) {
-				var maxWHalert = Math.floor(maxWH * 100) / 100;
-				alert('请选择 宽/高 大于 ' + (maxWHalert * 100) + '%' + ' 的图片');
-				return;
-			}
+			// if (nowWH <= maxWH) {
+			// 	var maxWHalert = Math.floor(maxWH * 100) / 100;
+			// 	alert('请选择 宽/高 大于 ' + (maxWHalert * 100) + '%' + ' 的图片');
+			// 	return;
+			// }
 			setShadow();
 		} 
 
@@ -192,6 +196,11 @@ var handle = {
 		}
 	},
 	cutOKclickHandle : function(){
+		console.log(cutImg.coordXY);
+		if (!cutImg.coordXY.width) {
+			alert('学长/姐 请截取图片~谢谢合作^ ^');
+			return;
+		}
 		$('.shadow').css('display', 'none');
 		$('#previewImg').attr('src', '');
         var rx = $(".img-before").width() / cutImg.coordXY.width;  
